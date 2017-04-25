@@ -47,7 +47,7 @@ Any applications that are listening can receive messages on:
 
 `logging.myapp.err` and `logging.myapp.inf`
 
-...and here is the advantage of using the NATS namespace - subscribing to certain subjects using wildcards lets you filter data.
+Here is the advantage of using the NATS subject namespace here - subscribing to certain subjects using wildcards will allow you to filter data.
 
 To receive all log messages from every app, subscribe to:
 `logging.>`
