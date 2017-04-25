@@ -1,6 +1,6 @@
 // Copyright 2017 Apcera Inc. All rights reserved.
 
-package natslogger
+package natslog
 
 import (
 	"strings"
@@ -125,6 +125,7 @@ func TestLoggerBadParameters(t *testing.T) {
 // TestLoggerFatalf checks for a panic
 func TestLoggerFatalf(t *testing.T) {
 
+	//TODO - FIXME.
 	s := lt.RunServer()
 	defer s.Shutdown()
 

@@ -23,14 +23,14 @@ The appname is set when you create the logger, the type is set by the API called
 
 ```go
 import (
-    "github.com/ColinSullivan1/nats-logger/natslogger"
+    "github.com/ColinSullivan1/nats-logger/natslog"
 )
 ```
 
 Now create a NATS logger and log some messages.
 ```go
 # Create a NATS logger for "myapp"
-l, _ := natslogger.NewNATSLogger("myapp", "nats://localhost:4222")
+l, _ := natslog.NewNATSLogger("myapp", "nats://localhost:4222")
 
 l.Infof("Here is an info message.")
 # This message will be published to logging.myapp.inf

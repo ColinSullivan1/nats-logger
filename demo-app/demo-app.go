@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/ColinSullivan1/nats-logger/natslogger"
+	"github.com/ColinSullivan1/nats-logger/natslog"
 	"github.com/Pallinder/go-randomdata"
 	"github.com/nats-io/go-nats"
 )
@@ -19,7 +19,7 @@ const (
 )
 
 // Randomly generates log statements, about 1/3 are error statements
-func generateLogStatements(l *natslogger.Logger) {
+func generateLogStatements(l *natslog.Logger) {
 	for {
 		if rand.Intn(2) > 0 {
 			l.Infof(fmt.Sprintf("Received email %s from IP %s.",
@@ -45,7 +45,7 @@ func main() {
 	flag.Parse()
 
 	// create a new NATS logger
-	l, err := natslogger.NewNATSLogger(appName, nURL)
+	l, err := natslog.NewNATSLogger(appName, nURL)
 	if err != nil {
 		fmt.Printf("%v\n", err)
 		os.Exit(-1)

@@ -1,7 +1,7 @@
 // Copyright 2017 Apcera Inc. All rights reserved.
 
-//Package natslogger provides logging facilities to a NATS server
-package natslogger
+//Package natslog provides logging facilities to publish log messages over NATS
+package natslog
 
 import (
 	"fmt"
